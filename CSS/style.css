@@ -1,9 +1,29 @@
+/* Lien pour inporter la fonts du projet */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+/* Variables des couleur principal du site et pour notres font */
+
+:root {
+  --color1: #0065fc;
+  --color2: #deebff;
+  --color3: #d9d9d9;
+  --color4: #f2f2f2;
+  --font1: "Raleway", sans-serif;
+}
+
+/* Règles css genéraux  */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.stars {
+  color: var(--color1);
+}
+
+.star-grey {
+  color: var(--color4);
 }
 
 li {
@@ -11,9 +31,13 @@ li {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font1);
   max-width: 1400px;
+  width: 95%;
+  margin: 0 auto;
 }
+
+/* Paramètre du header */
 
 .header {
   display: flex;
@@ -21,9 +45,9 @@ body {
 }
 
 .header img {
-  height: 19px;
-  width: 61.09px;
-  margin: 67px;
+  height: 20px;
+  width: 60px;
+  margin: 45px 65px 65px 0px;
 }
 
 .header nav {
@@ -35,16 +59,15 @@ body {
   justify-content: space-between;
 }
 
+.ul-content li {
+  padding-top: 45px;
+  border-top: solid white 2px;
+}
+
 .ul-content li a {
   text-decoration: none;
   color: black;
-  padding: 67px 20px 0 20px;
-}
-
-.ul-content li {
-  margin: 0 67px;
-  padding-top: 67px;
-  border-top: solid white 2px;
+  padding: 45px 20px 0 20px;
 }
 
 .ul-content li a:hover {
@@ -52,19 +75,202 @@ body {
   border-top: #0065fc solid 2px;
 }
 
+/* SECTION 1 */
+
+/******* Recherche *****/
+
+h1 {
+  font-size: 1.3rem;
+}
+
+.recherche {
+  margin: 20px 0 20px 0;
+  display: flex;
+}
+
+.recherche form {
+  border: 1px solid var(--color4);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background: var(--color4);
+  border-right: none;
+}
+
+.recherche form label {
+  background: var(--color4);
+  padding: 10px 10px 10px 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.recherche form input {
+  border: none;
+  padding: 13px;
+  outline: none;
+}
+
+.recherche button {
+  background: #0065fc;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.recherche button i {
+  display: none;
+}
+
+/****** Filtre *****/
+
+.filter {
+  display: flex;
+  align-items: center;
+}
+
+.filter h3 {
+  margin-right: 30px;
+}
+
+.filter ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter ul li {
+  margin-right: 15px;
+  border: 2px solid var(--color3);
+  padding: 10px;
+  border-radius: 25px;
+  text-transform: capitalize;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter ul li:hover {
+  background: var(--color2);
+}
+
+.filter ul li i {
+  color: var(--color1);
+}
+
+/************ Info ********/
+
+.info {
+  margin: 20px 0 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.info span {
+  margin-right: 20px;
+  border: 1px solid var(--color2);
+  padding: 10px;
+  height: 25px;
+  width: 25px;
+  border-radius: 12px;
+  display: flex;
+  font-size: 0.7rem;
+  justify-content: center;
+  align-items: center;
+  color: var(--color1);
+}
+
+/* ************************************************* */
+/* Taille temporaire des images pour ne pas qu'elles dérange  */
+
 .section-2-left-cards img,
 .section-2-right-cards img {
   height: 50px;
 }
 
-.stars {
-  color: #0065fc;
-}
-
-.star-grey {
-  color: #f2f2f2;
-}
-
 .activities img {
   height: 50px;
+}
+
+/* ***************************************************** */
+
+/* Media Query pour tablette */
+
+/* Média Query pour mobile  */
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    text-align: center;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header img {
+    margin: 20px 0 50px 0;
+  }
+
+  .header nav {
+    width: 100%;
+  }
+
+  .ul-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .ul-content li {
+    padding: 0 0 10px 0;
+  }
+
+  .ul-content li a {
+    padding: 0 20px 10px 20px;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 2px solid var(--color4);
+  }
+  .ul-content li a:hover {
+    border-top: none;
+    border-bottom: 2px solid var(--color1);
+  }
+
+  .section-1 {
+    width: 95%;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .recherche {
+    justify-content: center;
+  }
+
+  .recherche button span {
+    display: none;
+  }
+
+  .recherche button i {
+    display: contents;
+  }
+
+  .filter {
+    display: block;
+  }
+
+  .filter ul {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .filter ul li {
+    font-size: 0.8rem;
+  }
+  .filter ul li i {
+    font-size: 1rem;
+  }
 }
