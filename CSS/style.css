@@ -100,8 +100,9 @@ body {
 
 .recherche form {
   border: 1px solid var(--color4);
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  /* border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px; */
+  border-radius: 15px;
   background: var(--color4);
   border-right: none;
 }
@@ -111,6 +112,7 @@ body {
   padding: 10px 10px 10px 15px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  text-align: center;
 }
 
 .recherche form input {
@@ -161,7 +163,6 @@ body {
   border: 2px solid var(--color3);
   padding: 10px;
   border-radius: 25px;
-  text-transform: capitalize;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
@@ -334,8 +335,7 @@ footer {
   line-height: 2rem;
 }
 
-/* ************************************************* */
-/* Taille temporaire des images pour ne pas qu'elles dérange  */
+/***************** Taille des images ************/
 
 .section-2-left-cards img {
   height: 90px;
@@ -357,8 +357,6 @@ footer {
   border-radius: 20px 20px 0 0;
   object-fit: cover;
 }
-
-/* ***************************************************** */
 
 /********* Media Query pour tablette ********/
 
@@ -432,6 +430,12 @@ footer {
     justify-content: center;
   }
 
+  .recherche form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+  }
+
   .recherche button span {
     display: none;
   }
@@ -484,6 +488,11 @@ footer {
 
   .section-2-left-card-container {
     grid-template-columns: 1fr;
+  }
+
+  .section-2-left-cards,
+  .section-2-right-cards {
+    width: 100%;
   }
 
   .section-3 {
