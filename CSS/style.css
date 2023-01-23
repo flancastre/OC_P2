@@ -100,8 +100,6 @@ body {
 
 .recherche form {
   border: 1px solid var(--color4);
-  /* border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px; */
   border-radius: 15px;
   background: var(--color4);
   border-right: none;
@@ -229,7 +227,7 @@ body {
   width: 90%;
   margin: 0 auto;
   border-radius: 20px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 15px rgb(0 0 0 / 10%);
 }
 
 .section-2-left-cards:active {
@@ -275,7 +273,7 @@ body {
   width: 95%;
   margin: 15px auto;
   border-radius: 20px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 15px rgb(0 0 0 / 10%);
 }
 
 .section-2-right-cards:active {
@@ -309,7 +307,7 @@ body {
   width: 25%;
   margin: 0 10px 0 10px;
   border-radius: 20px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 15px rgb(0 0 0 / 10%);
 }
 .link-activities:active {
   transform: scale(0.9);
@@ -433,7 +431,7 @@ footer {
   .recherche form {
     width: 100%;
     display: grid;
-    grid-template-columns: 10% 80% 10%;
+    grid-template-columns: 15% 70% 15%;
   }
 
   .recherche button span {
@@ -526,5 +524,20 @@ footer {
 
   .footer-div {
     margin: 0 0 20px 0;
+  }
+}
+
+/* ******************************** */
+
+@media screen and (max-width: 381px) {
+  .filter ul {
+    gap: 10px;
+  }
+  .filter ul li {
+    font-size: 0.5rem;
+  }
+
+  .filter ul li i {
+    font-size: 0.7rem;
   }
 }
